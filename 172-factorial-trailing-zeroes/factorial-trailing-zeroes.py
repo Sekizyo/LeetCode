@@ -8,11 +8,10 @@ class Solution:
             m *= i
 
         count = 0
-        mList = list('%d' % m)
+        mList = str(m)
 
         for i in range(len(mList)-1, 0, -1):
-            char = mList[i]
-            if char == '0':
+            if mList[i] == '0':
                 count += 1
             else:
                 break
