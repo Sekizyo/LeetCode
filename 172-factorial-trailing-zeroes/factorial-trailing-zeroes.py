@@ -4,13 +4,11 @@ sys.set_int_max_str_digits(0)
 
 class Solution:
     def trailingZeroes(self, n: int) -> int:
-        m = math.factorial(n)
         count = 0
-        mList = list('%d' % m)
+        m = str(math.factorial(n))
 
-        for i in range(len(mList)-1, 0, -1):
-            char = mList[i]
-            if char == '0':
+        for i in range(len(m)-1, 0, -1):
+            if m[i] == '0':
                 count += 1
             else:
                 break
